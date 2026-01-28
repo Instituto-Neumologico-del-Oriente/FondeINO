@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="Resources_Software/style.css">
 </head>
 <body class="bg-red-100">
-    <header class="flex space-x-6 text-2xl font-bold text-white w-full justify-around h-24 bg-blue-500 shadow-md lg:block hidden ">
-        <div class="w-full flex justify-between items-center">
-             <div class="flex justify-around flex-wrap w-screen mx-4 h-20">
+    <header class="flex space-x-6 text-2xl font-bold text-white w-full justify-around h-[70px] bg-blue-500 shadow-md lg:block hidden ">
+        <div class="w-full flex justify-between items-center h-full">
+             <div class="flex justify-around items-center flex-wrap w-screen">
                 <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white self-start">
                     Inicio
                 </a>
@@ -27,7 +27,7 @@
             </div>
             
             <div class="flex justify-center items-center w-auto">
-                <div class="w-40 h-36 bg-white rounded-b-lg md:rounded-b-xl lg:rounded-b-2xl relative flex justify-center items-center">
+                <div class="w-40 h-36 bg-white rounded-b-lg md:rounded-b-xl lg:rounded-b-2xl relative flex justify-center items-end">
                     <img
                     src="Resources/FondeINO_logo.png"
                     alt="Logo FondeINO"
@@ -35,7 +35,7 @@
                     />
                 </div>
             </div>
-            <div class="flex justify-around flex-wrap w-screen mx-4 h-20">
+            <div class="flex justify-around flex-wrap w-screen mx-4 items-center">
                 <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
                     Eventos
                 </a>
@@ -53,31 +53,39 @@
     
 
     <!-- VERSIÓN MOBILE - Visible solo en pantallas pequeñas -->
-    <header class="lg:hidden bg-white shadow-md">
-        <div class="flex items-center justify-between p-4">
-            <!-- Logo/Imagen izquierda -->
-            <div class="w-32">
-                <img src="https://via.placeholder.com/150x50/3B82F6/FFFFFF?text=Logo" alt="Logo" class="w-full h-auto">
+    <header class="lg:hidden bg-white shadow-md h-[70px]">
+        <div class="flex items-center justify-between h-full px-4">
+            <!-- Logo -->
+            <div class="w-24 h-full flex items-center">
+                <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="w-full h-auto">
             </div>
-            
-            <!-- Botón Hamburguesa derecha -->
+
+            <!-- Botón hamburguesa -->
             <button id="menuBtn" class="text-gray-700 focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-        
-        <!-- Menú desplegable mobile -->
-        <nav id="mobileMenu" class="hidden bg-white border-t border-gray-200">
-            <ul class="py-2">
-                <li><a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Inicio</a></li>
-                <li><a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Servicios</a></li>
-                <li><a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Acerca de</a></li>
-                <li><a href="#" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Contacto</a></li>
+
+        <!-- Menú mobile -->
+        <nav id="mobileMenu"
+            class="overflow-hidden max-h-0 opacity-0 scale-y-95 origin-top
+                transition-all duration-300 ease-in-out
+                bg-white border-t border-gray-200">
+            <ul>
+                <li class="bg-blue-100"><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Inicio</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Nosotros</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Servicios</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Convenios</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Eventos</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Comunicados</a></li>
+                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
 
 </body>
 <script src="Resources_Software/app.js"></script>
