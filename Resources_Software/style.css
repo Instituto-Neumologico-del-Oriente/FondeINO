@@ -1,4 +1,395 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Custom styles can be added below */
+
+/* ===========================================
+   VARIABLES CSS Y RESET
+   =========================================== */
+:root {
+  --color-primary: #0098d6;
+  --color-primary-dark: #0077ab;
+  --color-accent: #2e7d32;
+  --color-accent-dark: #1b5e20;
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===========================================
+   NAVEGACIÓN
+   =========================================== */
+.nav-link {
+  position: relative;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #374151;
+  transition: var(--transition-base);
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link-active {
+  color: var(--color-primary);
+}
+
+.nav-link-active::after {
+  width: 100%;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #374151;
+  transition: var(--transition-base);
+  border-left: 3px solid transparent;
+}
+
+.mobile-nav-link:hover {
+  background-color: #f3f4f6;
+  border-left-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.mobile-nav-link-active {
+  background-color: #e8f5f9;
+  border-left-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.logo-container {
+  background: white;
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* ===========================================
+   HERO SECTION
+   =========================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding-top: 7rem;
+  }
+}
+
+.hero-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 540px;
+}
+
+@media (max-width: 1024px) {
+  .hero-description {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ===========================================
+   BOTONES
+   =========================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition-base);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 152, 214, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(0, 152, 214, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===========================================
+   IMAGEN Y CONTENEDOR
+   =========================================== */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0098d6 0%, #2e7d32 100%);
+  background-image: url("../Resources/FondeINO_logo.png");
+  background-size: 50% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 
+    0 20px 40px rgba(0, 152, 214, 0.15),
+    0 10px 20px rgba(0, 152, 214, 0.1);
+}
+
+@media (max-width: 640px) {
+  .image-container {
+    border-radius: 1.5rem;
+    max-width: 340px;
+  }
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.image-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+}
+
+/* Badge flotante */
+.badge-float {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    0 0 0 8px rgba(255, 255, 255, 0.3);
+  animation: float-badge 3s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .badge-float {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: -0.75rem;
+    right: -0.75rem;
+  }
+}
+
+.check-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--color-accent);
+}
+
+/* ===========================================
+   DECORACIONES
+   =========================================== */
+.circle-decoration {
+  position: absolute;
+  border: 2px solid rgba(0, 152, 214, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: 15%;
+  right: 5%;
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  right: -5%;
+  animation: float-slow 15s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 1024px) {
+  .circle-1,
+  .circle-2 {
+    display: none;
+  }
+}
+
+/* ===========================================
+   ANIMACIONES
+   =========================================== */
+@keyframes float-badge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, -10px) scale(1.05);
+  }
+}
+
+/* ===========================================
+   UTILIDADES
+   =========================================== */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* ===========================================
+   ACCESIBILIDAD
+   =========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible para teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

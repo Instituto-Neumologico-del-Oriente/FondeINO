@@ -1,92 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FondeINO</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./Resources_Software/tailwind.config.js"></script>
-    <link rel="stylesheet" href="Resources_Software/style.css">
-</head>
-<body class="bg-red-100">
-    <header class="flex space-x-6 text-2xl font-bold text-white w-full justify-around h-[70px] bg-blue-500 shadow-md lg:block hidden ">
-        <div class="w-full flex justify-between items-center h-full">
-             <div class="flex justify-around items-center flex-wrap w-screen">
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white self-start">
-                    Inicio
-                </a>
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Nosotros
-                </a>
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Servicios
-                </a>
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Convenios
-                </a>
-            </div>
-            
-            <div class="flex justify-center items-center w-auto">
-                <div class="w-40 h-36 bg-white rounded-b-lg md:rounded-b-xl lg:rounded-b-2xl relative flex justify-center items-end">
-                    <img
-                    src="Resources/FondeINO_logo.png"
-                    alt="Logo FondeINO"
-                    class="absolute w-full h-auto object-cover" 
-                    />
-                </div>
-            </div>
-            <div class="flex justify-around flex-wrap w-screen mx-4 items-center">
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Eventos
-                </a>
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Comunicados
-                </a>
-                <a href="#" class="relative text-sm sm:text-base md:text-lg lg:text-xl after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full self-start">
-                    Contacto
-                </a>
-            </div>
-        </div>
-        
-    </header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FondeINO - Tu bienestar financiero primero</title>
+    <meta name="description" content="Impulsamos tus metas a través del ahorro y crédito solidario. Únete a nuestra comunidad financiera.">
     
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#e8f5f9',
+                100: '#b3e0f2',
+                500: '#0098d6',
+                600: '#0077ab',
+                700: '#005580',
+              },
+              accent: {
+                50: '#f1f8f4',
+                100: '#d4ead9',
+                500: '#2e7d32',
+                600: '#1b5e20',
+              }
+            },
+            fontFamily: {
+              display: ['Bricolage Grotesque', 'sans-serif'],
+              body: ['Instrument Sans', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="Resources_Software/style.css" />
+  </head>
+  
+  <body>
+    <!-- Header Desktop -->
+    <header class="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+          <!-- Navegación Izquierda -->
+          <div class="flex items-center gap-8">
+            <a href="#inicio" class="nav-link nav-link-active">Inicio</a>
+            <a href="#nosotros" class="nav-link">Nosotros</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#convenios" class="nav-link">Convenios</a>
+          </div>
 
-    <!-- VERSIÓN MOBILE - Visible solo en pantallas pequeñas -->
-    <header class="lg:hidden bg-white shadow-md h-[70px]">
-        <div class="flex items-center justify-between h-full px-4">
-            <!-- Logo -->
-            <div class="w-24 h-full flex items-center">
-                <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="w-full h-auto">
+          <!-- Logo Central -->
+          <div class="absolute left-1/2 -translate-x-1/2 -bottom-4">
+            <div class="logo-container">
+              <img
+                src="Resources/FondeINO_logo.png"
+                alt="Logo FondeINO"
+                class="h-28 w-auto object-contain"
+              />
             </div>
+          </div>
 
-            <!-- Botón hamburguesa -->
-            <button id="menuBtn" class="text-gray-700 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+          <!-- Navegación Derecha -->
+          <div class="flex items-center gap-8">
+            <a href="#eventos" class="nav-link">Eventos</a>
+            <a href="#comunicados" class="nav-link">Comunicados</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+          </div>
         </div>
-
-        <!-- Menú mobile -->
-        <nav id="mobileMenu"
-            class="overflow-hidden max-h-0 opacity-0 scale-y-95 origin-top
-                transition-all duration-300 ease-in-out
-                bg-white border-t border-gray-200">
-            <ul>
-                <li class="bg-blue-100"><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Inicio</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Nosotros</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Servicios</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Convenios</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Eventos</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Comunicados</a></li>
-                <li><a href="#" class="block px-4 py-3 hover:bg-blue-50 transition">Contacto</a></li>
-            </ul>
-        </nav>
+      </nav>
     </header>
 
+    <!-- Header Mobile -->
+    <header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <div class="flex items-center justify-between h-16 px-4">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            src="Resources/FondeINO_logo.png"
+            alt="Logo FondeINO"
+            class="h-12 w-auto"
+          />
+        </div>
 
-</body>
-<script src="Resources_Software/app.js"></script>
+        <!-- Hamburger Button -->
+        <button 
+          id="menuBtn" 
+          class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+          aria-label="Menú de navegación"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobileMenu"
+        class="overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white border-t border-gray-100"
+      >
+        <div class="py-2">
+          <a href="#inicio" class="mobile-nav-link mobile-nav-link-active">Inicio</a>
+          <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
+          <a href="#servicios" class="mobile-nav-link">Servicios</a>
+          <a href="#convenios" class="mobile-nav-link">Convenios</a>
+          <a href="#eventos" class="mobile-nav-link">Eventos</a>
+          <a href="#comunicados" class="mobile-nav-link">Comunicados</a>
+          <a href="#contacto" class="mobile-nav-link">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero-section">
+        <!-- Background Decorations -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <!-- Gradiente suave -->
+          <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-primary-50 to-transparent rounded-full blur-3xl opacity-40"></div>
+          <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent-50 to-transparent rounded-full blur-3xl opacity-40"></div>
+          
+          <!-- Círculos decorativos -->
+          <div class="circle-decoration circle-1"></div>
+          <div class="circle-decoration circle-2"></div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <!-- Columna Izquierda: Texto -->
+            <div class="text-center lg:text-left space-y-6 lg:space-y-8">
+              <!-- Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent-50 rounded-full text-accent-600 text-sm font-medium">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Fondo de empleados certificado
+              </div>
+
+              <!-- Título -->
+              <h1 class="hero-title">
+                <span class="block text-primary-600">FONDEINO</span>
+                <span class="block text-gray-900">Tu bienestar financiero primero</span>
+              </h1>
+
+              <!-- Descripción -->
+              <p class="hero-description">
+                Impulsamos tus metas a través del ahorro y crédito solidario. 
+                Únete a nuestra comunidad y construye un futuro financiero sólido con beneficios exclusivos.
+              </p>
+
+              <!-- Botones -->
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button class="btn btn-primary group">
+                  Quiero más información
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+                <button class="btn btn-outline">
+                  Conocer beneficios
+                </button>
+              </div>
+
+              <!-- Stats -->
+              <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl font-bold text-primary-600 font-display">500+</div>
+                  <div class="text-sm text-gray-600 mt-1">Asociados</div>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl font-bold text-primary-600 font-display">15</div>
+                  <div class="text-sm text-gray-600 mt-1">Años de experiencia</div>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="text-3xl font-bold text-primary-600 font-display">$2M+</div>
+                  <div class="text-sm text-gray-600 mt-1">En créditos</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen -->
+            <div class="relative flex justify-center lg:justify-end">
+              <div class="image-wrapper">
+                <!-- Imagen Principal -->
+                <div class="image-container">
+                  <div class="image-overlay"></div>
+                  
+                  <!-- Contenido sobre la imagen -->
+                  <div class="image-content">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                      <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                        </svg>
+                      </div>
+                      <h3 class="text-2xl font-bold text-white font-display">Ahorro Solidario</h3>
+                    </div>
+                    <p class="text-white/90 text-center">Crece junto a tu comunidad</p>
+                  </div>
+                </div>
+
+                <!-- Badge flotante -->
+                <div class="badge-float">
+                  <svg class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secciones adicionales placeholder -->
+      <section id="nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-4xl font-bold text-gray-900 font-display mb-4">Nosotros</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Contenido de la sección Nosotros</p>
+        </div>
+      </section>
+
+      <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-4xl font-bold text-gray-900 font-display mb-4">Servicios</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Contenido de la sección Servicios</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4 text-center">
+        <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="h-16 w-auto mx-auto mb-6 brightness-0 invert">
+        <p class="text-gray-400">&copy; 2026 FondeINO. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="Resources_Software/app.js"></script>
+  </body>
 </html>
