@@ -3,16 +3,25 @@
 @tailwind utilities;
 
 /* ===========================================
-   VARIABLES CSS Y RESET
+   VARIABLES CSS GLOBALES
    =========================================== */
 :root {
+  /* Colores principales - Alineados con Tailwind config */
   --color-primary: #0098d6;
+  --color-primary-light: #26a9e0;
   --color-primary-dark: #0077ab;
   --color-accent: #2e7d32;
+  --color-accent-light: #53ab6a;
   --color-accent-dark: #1b5e20;
+  
+  /* Transiciones */
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===========================================
+   RESET Y BASE
+   =========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +67,8 @@ body {
   color: var(--color-primary);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link-active::after {
   width: 100%;
 }
 
@@ -66,10 +76,7 @@ body {
   color: var(--color-primary);
 }
 
-.nav-link-active::after {
-  width: 100%;
-}
-
+/* Navegación móvil */
 .mobile-nav-link {
   display: block;
   padding: 1rem 1.5rem;
@@ -93,6 +100,7 @@ body {
   font-weight: 600;
 }
 
+/* Logo container */
 .logo-container {
   background: white;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -194,7 +202,7 @@ body {
 }
 
 /* ===========================================
-   IMAGEN Y CONTENEDOR
+   IMAGEN Y CONTENEDOR HERO
    =========================================== */
 .image-wrapper {
   position: relative;
@@ -208,7 +216,7 @@ body {
   aspect-ratio: 3 / 4;
   border-radius: 2rem;
   overflow: hidden;
-  background: linear-gradient(135deg, #0098d6 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   background-image: url("../Resources/FondeINO_logo.png");
   background-size: 50% auto;
   background-position: center;
@@ -328,49 +336,6 @@ body {
   }
   50% {
     transform: translate(10px, -10px) scale(1.05);
-  }
-}
-
-/* ===========================================
-   UTILIDADES
-   =========================================== */
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
   }
 }
 

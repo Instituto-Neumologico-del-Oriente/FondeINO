@@ -4,32 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FondeINO - Tu bienestar financiero primero</title>
-    <meta name="description" content="Impulsamos tus metas a través del ahorro y crédito solidario. Únete a nuestra comunidad financiera.">
-    
+    <meta name="description" content="Impulsamos tus metas a través del ahorro y crédito solidario. Únete a nuestra comunidad financiera." />
+
     <!-- Fuentes de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
+              // Azul principal (color corporativo FondeINO)
               primary: {
                 50: '#e8f5f9',
                 100: '#b3e0f2',
+                200: '#80ccec',
+                300: '#4db8e6',
+                400: '#26a9e0',
                 500: '#0098d6',
                 600: '#0077ab',
                 700: '#005580',
+                800: '#003d5c',
+                900: '#002638',
               },
+              // Verde acento (solidaridad y crecimiento)
               accent: {
                 50: '#f1f8f4',
                 100: '#d4ead9',
+                200: '#a9d5b4',
+                300: '#7ec08f',
+                400: '#53ab6a',
                 500: '#2e7d32',
                 600: '#1b5e20',
-              }
+                700: '#164e1a',
+                800: '#113e15',
+                900: '#0c2e10',
+              },
             },
             fontFamily: {
               display: ['Bricolage Grotesque', 'sans-serif'],
@@ -37,11 +51,11 @@
             },
           },
         },
-      }
+      };
     </script>
     <link rel="stylesheet" href="Resources_Software/style.css" />
   </head>
-  
+
   <body>
     <!-- Header Desktop -->
     <header class="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
@@ -49,7 +63,7 @@
         <div class="flex items-center justify-between h-20">
           <!-- Navegación Izquierda -->
           <div class="flex items-center gap-8">
-            <a href="#inicio" class="nav-link nav-link-active">Inicio</a>
+            <a href="index.html" class="nav-link nav-link-active">Inicio</a>
             <a href="#nosotros" class="nav-link">Nosotros</a>
             <a href="#servicios" class="nav-link">Servicios</a>
             <a href="#convenios" class="nav-link">Convenios</a>
@@ -58,11 +72,7 @@
           <!-- Logo Central -->
           <div class="absolute left-1/2 -translate-x-1/2 -bottom-4">
             <div class="logo-container">
-              <img
-                src="Resources/FondeINO_logo.png"
-                alt="Logo FondeINO"
-                class="h-28 w-auto object-contain"
-              />
+              <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="h-28 w-auto object-contain" />
             </div>
           </div>
 
@@ -81,19 +91,11 @@
       <div class="flex items-center justify-between h-16 px-4">
         <!-- Logo -->
         <div class="flex items-center">
-          <img
-            src="Resources/FondeINO_logo.png"
-            alt="Logo FondeINO"
-            class="h-12 w-auto"
-          />
+          <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="h-12 w-auto" />
         </div>
 
         <!-- Hamburger Button -->
-        <button 
-          id="menuBtn" 
-          class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
-          aria-label="Menú de navegación"
-        >
+        <button id="menuBtn" class="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Menú de navegación">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -101,12 +103,9 @@
       </div>
 
       <!-- Mobile Menu -->
-      <nav
-        id="mobileMenu"
-        class="overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white border-t border-gray-100"
-      >
+      <nav id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white border-t border-gray-100">
         <div class="py-2">
-          <a href="#inicio" class="mobile-nav-link mobile-nav-link-active">Inicio</a>
+          <a href="index.html" class="mobile-nav-link mobile-nav-link-active">Inicio</a>
           <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
           <a href="#servicios" class="mobile-nav-link">Servicios</a>
           <a href="#convenios" class="mobile-nav-link">Convenios</a>
@@ -126,7 +125,7 @@
           <!-- Gradiente suave -->
           <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-primary-50 to-transparent rounded-full blur-3xl opacity-40"></div>
           <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-accent-50 to-transparent rounded-full blur-3xl opacity-40"></div>
-          
+
           <!-- Círculos decorativos -->
           <div class="circle-decoration circle-1"></div>
           <div class="circle-decoration circle-2"></div>
@@ -135,7 +134,6 @@
         <!-- Content Container -->
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
           <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            
             <!-- Columna Izquierda: Texto -->
             <div class="text-center lg:text-left space-y-6 lg:space-y-8">
               <!-- Badge -->
@@ -154,7 +152,7 @@
 
               <!-- Descripción -->
               <p class="hero-description">
-                Impulsamos tus metas a través del ahorro y crédito solidario. 
+                Impulsamos tus metas a través del ahorro y crédito solidario.
                 Únete a nuestra comunidad y construye un futuro financiero sólido con beneficios exclusivos.
               </p>
 
@@ -194,7 +192,7 @@
                 <!-- Imagen Principal -->
                 <div class="image-container">
                   <div class="image-overlay"></div>
-                  
+
                   <!-- Contenido sobre la imagen -->
                   <div class="image-content">
                     <div class="flex items-center justify-center gap-3 mb-3">
@@ -222,14 +220,169 @@
         </div>
       </section>
 
-      <!-- Secciones adicionales placeholder -->
-      <section id="nosotros" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-          <h2 class="text-4xl font-bold text-gray-900 font-display mb-4">Nosotros</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">Contenido de la sección Nosotros</p>
+      <!-- Sección de Herramientas -->
+      <section id="herramientas" class="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700">
+        <!-- Decoraciones de fondo -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <!-- Burbujas animadas -->
+          <div class="hidden md:block absolute w-72 h-72 bg-white/10 rounded-full top-[10%] left-[5%] backdrop-blur-xl animate-pulse"></div>
+          <div class="hidden md:block absolute w-52 h-52 bg-white/10 rounded-full top-[50%] right-[10%] backdrop-blur-xl animate-pulse delay-150"></div>
+          <div class="hidden md:block absolute w-40 h-40 bg-white/10 rounded-full bottom-[20%] left-[15%] backdrop-blur-xl animate-pulse delay-300"></div>
+          <div class="hidden md:block absolute w-64 h-64 bg-white/10 rounded-full bottom-[10%] right-[5%] backdrop-blur-xl animate-pulse delay-500"></div>
+
+          <!-- Efecto de luz superior -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-b from-white/10 to-transparent blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+          <!-- Encabezado de sección -->
+          <div class="text-center mb-8 md:mb-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-semibold mb-3 shadow-lg">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 7H7v6h6V7z" />
+                <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd" />
+              </svg>
+              Herramientas digitales
+            </div>
+
+            <!-- Título -->
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight leading-tight">
+              Todo lo que necesitas
+              <span class="block bg-gradient-to-r from-accent-200 via-accent-100 to-white bg-clip-text text-transparent">
+                en un solo lugar
+              </span>
+            </h2>
+
+            <!-- Descripción -->
+            <p class="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+              Accede a nuestras herramientas diseñadas para simplificar tu vida financiera
+            </p>
+          </div>
+
+          <!-- Grid de herramientas -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Herramienta 1: Simulador de créditos -->
+            <div class="group relative bg-white/95 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-2xl border border-white/20 hover:border-white/40">
+              <div class="relative z-10 p-5 md:p-6 flex flex-col gap-3 h-full">
+                <!-- Ícono -->
+                <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+
+                <!-- Información -->
+                <div class="flex-grow">
+                  <h3 class="text-lg font-bold text-slate-800 mb-1.5 leading-tight">Simulador de créditos</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Calcula tu crédito con tasas transparentes</p>
+                </div>
+
+                <!-- Botón -->
+                <button class="flex items-center gap-1.5 text-primary-600 font-semibold text-xs pt-3 border-t border-slate-200 group-hover:gap-2 transition-all duration-300">
+                  <span>Simular ahora</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Herramienta 2: Descargables -->
+            <div class="group relative bg-white/95 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-2xl border border-white/20 hover:border-white/40">
+              <div class="relative z-10 p-5 md:p-6 flex flex-col gap-3 h-full">
+                <!-- Ícono -->
+                <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 10.5h5M9.5 13.5h5M9.5 16.5h3" />
+                  </svg>
+                </div>
+
+                <!-- Información -->
+                <div class="flex-grow">
+                  <h3 class="text-lg font-bold text-slate-800 mb-1.5 leading-tight">Descargables</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Reglamentos y formularios a tu alcance</p>
+                </div>
+
+                <!-- Botón -->
+                <button class="flex items-center gap-1.5 text-primary-600 font-semibold text-xs pt-3 border-t border-slate-200 group-hover:gap-2 transition-all duration-300">
+                  <span>Ver documentos</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Herramienta 3: Asociarse -->
+            <div class="group relative bg-white/95 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-2xl border border-white/20 hover:border-white/40">
+              <div class="relative z-10 p-5 md:p-6 flex flex-col gap-3 h-full">
+                <!-- Ícono -->
+                <div class="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+
+                <!-- Información -->
+                <div class="flex-grow">
+                  <h3 class="text-lg font-bold text-slate-800 mb-1.5 leading-tight">Asociarse</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Únete y disfruta beneficios exclusivos</p>
+                </div>
+
+                <!-- Botón -->
+                <button class="flex items-center gap-1.5 text-primary-600 font-semibold text-xs pt-3 border-t border-slate-200 group-hover:gap-2 transition-all duration-300">
+                  <span>Unirse ahora</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Herramienta 4: Dónde estamos -->
+            <div class="group relative bg-white/95 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 shadow-xl hover:shadow-2xl border border-white/20 hover:border-white/40">
+              <div class="relative z-10 p-5 md:p-6 flex flex-col gap-3 h-full">
+                <!-- Ícono -->
+                <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+
+                <!-- Información -->
+                <div class="flex-grow">
+                  <h3 class="text-lg font-bold text-slate-800 mb-1.5 leading-tight">¿Dónde estamos?</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Encuéntranos y visítanos fácilmente</p>
+                </div>
+
+                <!-- Botón -->
+                <button class="flex items-center gap-1.5 text-primary-600 font-semibold text-xs pt-3 border-t border-slate-200 group-hover:gap-2 transition-all duration-300">
+                  <span>Ver ubicación</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to action -->
+          <div class="mt-8 md:mt-10 text-center">
+            <p class="text-white/80 text-xs mb-3">¿Necesitas ayuda personalizada?</p>
+            <button class="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 bg-white text-primary-600 rounded-xl font-semibold text-sm hover:bg-accent-50 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Habla con un asesor
+            </button>
+          </div>
         </div>
       </section>
 
+      <!-- Sección Servicios -->
       <section id="servicios" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-4xl font-bold text-gray-900 font-display mb-4">Servicios</h2>
@@ -241,11 +394,11 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="container mx-auto px-4 text-center">
-        <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="h-16 w-auto mx-auto mb-6 brightness-0 invert">
+        <img src="Resources/FondeINO_logo.png" alt="Logo FondeINO" class="h-16 w-auto mx-auto mb-6 brightness-0 invert" />
         <p class="text-gray-400">&copy; 2026 FondeINO. Todos los derechos reservados.</p>
       </div>
     </footer>
 
     <script src="Resources_Software/app.js"></script>
   </body>
-</html>
+</html> 

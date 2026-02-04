@@ -247,18 +247,18 @@ function updateActiveNavOnScroll() {
       }
     });
     
-    navLinks.forEach(link => {
-      link.classList.remove('nav-link-active', 'mobile-nav-link-active');
+    // navLinks.forEach(link => {
+    //   link.classList.remove('nav-link-active', 'mobile-nav-link-active');
       
-      const href = link.getAttribute('href');
-      if (href === `#${currentSection}`) {
-        if (link.classList.contains('nav-link')) {
-          link.classList.add('nav-link-active');
-        } else {
-          link.classList.add('mobile-nav-link-active');
-        }
-      }
-    });
+    //   const href = link.getAttribute('href');
+    //   if (href === `#${currentSection}`) {
+    //     if (link.classList.contains('nav-link')) {
+    //       link.classList.add('nav-link-active');
+    //     } else {
+    //       link.classList.add('mobile-nav-link-active');
+    //     }
+    //   }
+    // });
   });
 }
 
