@@ -13,47 +13,8 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              // Azul principal (color corporativo FondeINO)
-              primary: {
-                50: '#e8f5f9',
-                100: '#b3e0f2',
-                200: '#80ccec',
-                300: '#4db8e6',
-                400: '#26a9e0',
-                500: '#0098d6',
-                600: '#0077ab',
-                700: '#005580',
-                800: '#003d5c',
-                900: '#002638',
-              },
-              // Verde acento (solidaridad y crecimiento)
-              accent: {
-                50: '#f1f8f4',
-                100: '#d4ead9',
-                200: '#a9d5b4',
-                300: '#7ec08f',
-                400: '#53ab6a',
-                500: '#2e7d32',
-                600: '#1b5e20',
-                700: '#164e1a',
-                800: '#113e15',
-                900: '#0c2e10',
-              },
-            },
-            fontFamily: {
-              display: ['Bricolage Grotesque', 'sans-serif'],
-              body: ['Instrument Sans', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="stylesheet" href="Resources_Software/style.css" />
+    <script src="./Resources_Software/tailwind.config.js"></script>
+    <link rel="stylesheet" href="./Resources_Software/style.css" />
   </head>
 
   <body>
@@ -393,12 +354,12 @@
 
       <!-- Texto -->
       <div class="max-w-xl relative z-10">
-        <span class="inline-block mb-3 text-sm font-semibold text-green-700 uppercase tracking-wide">
+        <span class="inline-block mb-3 text-sm font-semibold text-accent-600 uppercase tracking-wide">
           FONDEINO
         </span>
 
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          Nuestros <span class="text-blue-600">Servicios</span>
+          Nuestros <span class="text-primary-600">Servicios</span>
         </h2>
 
         <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
@@ -415,7 +376,7 @@
 
         <a
           href="#"
-          class="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white font-semibold px-8 py-4 rounded-xl transition shadow-md hover:shadow-lg"
+          class="inline-flex items-center justify-center bg-accent-600 hover:bg-accent-700 text-white font-semibold px-8 py-4 rounded-xl transition shadow-md hover:shadow-lg"
         >
           Ver servicios
         </a>
@@ -433,56 +394,95 @@
       </div>
 
       <!-- Decoración de fondo (solo desktop grande) -->
-      <div class="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100 rounded-full opacity-40"></div>
+      <div class="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary-100 rounded-full opacity-40"></div>
 
     </div>
   </div>
 </section>
 <!-- LINEAS DE AHORRO -->
-  <section id="ahorro" class="bg-white py-16">
+  <section id="ahorro" class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
-        Líneas de Ahorro
-      </h2>
+      <div class="text-center mb-14">
+        <span class="inline-block mb-3 text-sm font-semibold text-accent-600 uppercase tracking-wide">
+          TU FUTURO SEGURO
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          Líneas de <span class="text-primary-600">Ahorro</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Opciones flexibles para construir tu patrimonio y alcanzar tus metas financieras.
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">Ahorro Permanente Obligatorio</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Ahorro Permanente Obligatorio</h3>
           <p class="text-sm text-gray-600">
             Base de tu vinculación al Fondo y respaldo para el acceso a otros beneficios.
           </p>
         </div>
 
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">Ahorro Voluntario</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Ahorro Voluntario</h3>
           <p class="text-sm text-gray-600">
             Ahorro flexible que puedes incrementar según tu capacidad y metas.
           </p>
         </div>
 
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">Ahorro a la Vista</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Ahorro a la Vista</h3>
           <p class="text-sm text-gray-600">
             Recursos disponibles para retiro cuando lo necesites.
           </p>
         </div>
 
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">Ahorro Programado o Navideño</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Ahorro Programado o Navideño</h3>
           <p class="text-sm text-gray-600">
             Ideal para planificar gastos especiales o metas de corto plazo.
           </p>
         </div>
 
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">Ahorro Educativo</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">Ahorro Educativo</h3>
           <p class="text-sm text-gray-600">
             Pensado para apoyar la formación académica del asociado y su familia.
           </p>
         </div>
 
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h3 class="font-semibold mb-2">INO Ahorrito</h3>
+        <div class="bg-white p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-primary-200 transition group">
+          <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900 mb-2">INO Ahorrito</h3>
           <p class="text-sm text-gray-600">
             Línea diseñada para fomentar la cultura del ahorro en los hijos o beneficiarios menores.
           </p>
@@ -495,8 +495,11 @@
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-14">
+      <span class="inline-block mb-3 text-sm font-semibold text-accent-600 uppercase tracking-wide">
+        FINANCIAMIENTO A TU MEDIDA
+      </span>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-        Líneas de Crédito
+        Líneas de <span class="text-primary-600">Crédito</span>
       </h2>
       <p class="text-gray-600 max-w-2xl mx-auto">
         Opciones flexibles diseñadas para acompañarte en cada momento de tu vida.
@@ -505,42 +508,72 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Libre Inversión</h3>
         <p class="text-gray-600 text-sm">
           Para necesidades personales sin destinación específica.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+          <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Crédito Educativo</h3>
         <p class="text-gray-600 text-sm">
           Apoyo para matrícula, pensiones y programas académicos.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Crédito de Salud</h3>
         <p class="text-gray-600 text-sm">
           Cobertura para gastos médicos y bienestar integral.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+          <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Calamidad Doméstica</h3>
         <p class="text-gray-600 text-sm">
           Respaldo ante emergencias familiares o del hogar.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Emprendimiento</h3>
         <p class="text-gray-600 text-sm">
           Impulsa tus ideas de negocio y proyectos productivos.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary-200 border border-gray-200 transition group">
+        <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-100 transition">
+          <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+        </div>
         <h3 class="font-semibold text-gray-900 mb-2">Ceri Prima</h3>
         <p class="text-gray-600 text-sm">
           Acceso a liquidez mediante primas y beneficios especiales.
@@ -561,6 +594,6 @@
       </div>
     </footer>
 
-    <script src="Resources_Software/app.js"></script>
+    <script src="./Resources_Software/app.js"></script>
   </body>
 </html> 
